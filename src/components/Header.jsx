@@ -51,6 +51,11 @@ const AuthButton = () => {
 };
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleToggleMenu = () => setShowMenu(!showMenu);
+  const handleCloseMenu = () => setShowMenu(false);
+
   return (
     <header className="header" id="header">
       <nav className="nav container">
@@ -58,28 +63,28 @@ const Header = () => {
           <img src="assets/img/logo.png" alt="" className="nav__logo-img" />
           JeraWHAT?!
         </Link>
-        <div className="nav__menu" id="nav-menu">
+        <div className={`nav__menu${showMenu ? ' show-menu' : ''}`} id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/" className="nav__link">Home</Link>
+              <Link to="/" className="nav__link" onClick={handleCloseMenu}>Home</Link>
             </li>
             <li className="nav__item">
-              <Link to="/about" className="nav__link">About</Link>
+              <Link to="/about" className="nav__link" onClick={handleCloseMenu}>About</Link>
             </li>
             <li className="nav__item">
-              <Link to="/habbit" className="nav__link">Habbit</Link>
+              <Link to="/habbit" className="nav__link" onClick={handleCloseMenu}>Habbit</Link>
             </li>
             <li className="nav__item">
-              <Link to="/article" className="nav__link">Article</Link>
+              <Link to="/article" className="nav__link" onClick={handleCloseMenu}>Article</Link>
             </li>
             <AuthButton />
           </ul>
-          <div className="nav__close" id="nav-close">
+          <div className="nav__close" id="nav-close" onClick={handleCloseMenu}>
             <i className="bx bx-x"></i>
           </div>
           <img src="assets/img/nav-img.png" alt="" className="nav__img" />
         </div>
-        <div className="nav__toggle" id="nav-toggle">
+        <div className="nav__toggle" id="nav-toggle" onClick={handleToggleMenu}>
           <i className="bx bx-grid-alt"></i>
         </div>
       </nav>
