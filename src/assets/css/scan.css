@@ -1,0 +1,129 @@
+.scan__container {
+  padding: 6rem 0 2rem;
+  margin-top: 2rem;
+}
+
+.scan__content {
+  gap: 2rem;
+}
+
+.scan__image-container {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scan__upload-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.scan__camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.scan__camera-preview {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.scan__preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scan__preview {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+}
+
+.scan__capture-btn,
+.scan__retake-btn,
+.scan__analyze-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+
+.scan__analysis-container {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scan__results {
+  margin-top: 2rem;
+}
+
+.scan__result-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+  color: var(--title-color);
+}
+
+.scan__severity {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scan__percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scan__percentage-value {
+  font-size: 3rem;
+  font-weight: var(--font-bold);
+  color: var(--first-color);
+}
+
+.scan__severity-text {
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+}
+
+.scan__food-list {
+  list-style: none;
+  padding: 0;
+}
+
+.scan__food-item {
+  background-color: var(--body-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.scan__food-name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.scan__food-benefit {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .scan__content {
+    grid-template-columns: 1fr 1fr;
+  }
+} 
